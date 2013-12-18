@@ -1,0 +1,24 @@
+#!/bin/sh
+#
+# Start application
+#
+
+case "$1" in
+  start)
+	echo -n "Starting application: "
+	start-stop-daemon -S -q -p /var/run/app.pid --exec /dermalog/start-app.sh
+	echo "OK"
+	;;
+  stop)
+	echo -n "Stopping application: "
+	start-stop-daemon -K -q -p /var/run/app.pid --exec /dermalog/stop-app.sh
+	echo "OK"
+	;;
+  restart|reload)
+	;;
+  *)
+	echo "Usage: $0 {start|stop|restart}"
+	exit 1
+esac
+
+exit $?

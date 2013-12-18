@@ -1,0 +1,46 @@
+acl acpid alsa-lib alsamixergui apr apr-util argp-standalone argus arptables at atk attr audiofile autoconf automake avahi axel 
+b43-firmware b43-fwcutter bash beecrypt berkeleydb bind binutils bison blackbox bluez_utils bmon boa bonnie boost bootutils 
+bridge-utils bsdiff bustle bwm-ng bzip2 cache-calibrator cairo can-utils ccache ccid cdrkit cegui06 celt051 cgilua cifs-utils cjson 
+classpath cloop cmake collectd Config.in Config.in.host connman conntrack-tools copas coreutils coxpcall cpanminus cpuload cramfs 
+crosstool-ng ctorrent cups curlftpfs cvs dash dbus dbus-glib dbus-python devmem2 dfu-util dhcp dhcpdump dhrystone dialog diffutils 
+directfb directfb-examples distcc divine dmalloc dmidecode dmraid dnsmasq docker doom-wad dosfstools dropbear dsp-tools dstat 
+dvb-apps dvbsnoop e2fsprogs ebtables ed eeprog efl elftosb elfutils empty enchant enlightenment erlang ethtool evtest expat 
+explorercanvas ezxml fakeroot fbdump fbgrab fbset fbterm fb-test-app fbv fconfig feh fftw file findutils firmware-imx fis flashbench 
+flashrom flex flot fltk fluxbox fmtools fontconfig freerdp freetype fxload gadgetfs-test gamin gawk gd gdbm gdisk gdk-pixbuf 
+genext2fs genromfs gesftpserver gettext giblib glib-networking gmp gmpc gnuchess gnupg gnutls gob2 googlefontdirectory gperf gpsd 
+gqview grantlee grep gsl gtk2-engines gtk2-themes gtkperf gvfs gzip haserl hdparm heirloom-mailx hiawatha hostapd htop httping 
+hwdata i2c-tools icu ifplugd iftop igh-ethercat imagemagick imlib2 imx-lib inadyn infozip inotify-tools input-event-daemon 
+input-tools intltool iostat iperf ipkg iproute2 ipsec-tools ipset iptables irda-utils iw jamvm jpeg jpeg-turbo jquery 
+jquery-sparkline jquery-validation jsmin json-c kbd kexec keyutils kismet kmod latencytop lcdapi lcdproc leafpad less libaio libao 
+libarchive libargtable2 libart libatasmart libatomic_ops libcap libcap-ng libcdaudio libcgi libcgicc libcofi libconfig libconfuse 
+libcue libcuefile libcurl libdaemon libdmtx libdnet libdrm libdvdnav libdvdread libebml libelf liberation libesmtp libev libevent 
+libexif libeXosip2 libfcgi libffi libfreefare libfribidi libfslcodec libfslparser libfslvpuwrap libftdi libfuse libgail libgcrypt 
+libgeotiff libglade libglib2 libgpg-error libgsasl libgtk2 libhid libical libiconv libid3tag libidn libiqrf libiscsi libjpeg liblo 
+liblockfile liblog4c-localtime libmad libmatroska libmbus libmcrypt libmhash libmicrohttpd libmms libmnl libmodbus libmpd libmpeg2 
+libnetfilter_acct libnetfilter_conntrack libnetfilter_cthelper libnetfilter_cttimeout libnetfilter_log libnetfilter_queue libnfc 
+libnfc-llcp libnfnetlink libnl libnspr libnss liboauth libogg liboping libosip2 libpcap libplayer libpng libraw libraw1394 
+libreplaygain libroxml librsvg librsync libsamplerate libseccomp libsexy libsha1 libsigc libsndfile libsoup libsvgtiny libsysfs 
+libtheora libtirpc libtool libtorrent libtpl libungif libupnp liburcu libusb libusb-compat libv4l libvncserver libvorbis libxml2 
+libxml-parser-perl libxslt libyaml lighttpd linenoise links linphone linux-firmware linux-fusion linux-pam lite live555 lmbench 
+lm-sensors localedef lockfile-progs logrotate logsurfer lpc3250loader lrzsz lshw lsof lsuio ltp-testsuite ltrace lttng-babeltrace 
+lttng-libust lttng-modules lttng-tools lua luacjson luaexpat luafilesystem luajit lua-msgpack-native luasocket lvm2 lzma lzo lzop m4 
+macchanger make makedevs Makefile.in matchbox mcrypt mdadm media-ctl mediastreamer memstat memtester metacity microperl midori 
+mii-diag minicom mobile-broadband-provider-info module-init-tools monit mpc mpfr mrouted msmtp mtd mtdev mtdev2tuio multimedia mutt 
+mxml mysql_client nano nanocom nasm nbd ncdu ncftp ncurses ndisc6 neard neardal neon netatalk netcat netkitbase netkittelnet netperf 
+netplug netsnmp netstat-nat nettle network-manager newt nfacct nfs-utils ngircd ngrep noip nss-mdns ntfs-3g ntp nuttcp ocf-linux 
+ofono olsr omap-u-boot-utils open2300 opencv openntpd openocd openssh openssl openswan openvpn opkg oprofile opus opus-tools orc 
+ortp owl-linux pango parted patch pciutils pcmanfm pcre pcsc-lite perf perl php picocom pixman pkg-autotools.mk pkg-cmake.mk pkgconf 
+pkg-config pkg-download.mk pkg-generic.mk pkg-utils.mk poco polarssl polkit popt portaudio portmap pppd pptp-linux prboom procps 
+proftpd protobuf proxychains-ng psmisc pv python python3 python-bottle python-distutilscross python-dpkt python-id3 python-mad 
+python-meld3 python-netifaces python-nfc python-protobuf python-pygame python-pyparsing python-serial python-setuptools qemu 
+qextserialport qt qtuio quagga quota qwt radvd ramspeed rdesktop read-edid readline rings rng-tools rpcbind rpi-firmware 
+rpi-userland rpm rp-pppoe rrdtool rsh-redone rsync rsyslog rtai rtorrent rt-tests rubix ruby samba sam-ba sane-backends sawman 
+schifra sconeserver scons screen sdl sdl_gfx sdl_image sdl_mixer sdl_net sdl_sound sdl_ttf sdparm sed ser2net setserial sg3_utils 
+shared-mime-info slang slirp smartmontools snowball-hdmiservice snowball-init socat socketcand sound-theme-borealis 
+sound-theme-freedesktop spawn-fcgi speex spice spice-protocol sqlcipher sqlite squashfs squashfs3 squid sredird sshfs sstrip 
+startup-notification statserial strace stress stunnel sudo supervisor sylpheed synergy sysklogd sysprof sysstat systemd sysvinit 
+taglib tar tcl tcllib tcpdump tcpreplay tftpd thttpd tiff time tinyhttpd ti-utils tn5250 torsmo transmission tremor tslib ttcp 
+tvheadend uboot-tools udev udisks udpcast uemacs ulogd unionfs usb_modeswitch usb_modeswitch_data usbmount usbredir usbutils ushare 
+util-linux ux500-firmware vala valgrind vde2 vim vpnc vsftpd vtun webkit webrtc-audio-processing wget whetstone which wipe 
+wireless_tools wpa_supplicant wsapi x11r7 x11vnc xavante xenomai xerces xfsprogs xinetd xl2tp xmlstarlet xstroke xterm xvkbd xz yajl 
+yasm yavta zd1211-firmware zeromq zlib zxing
