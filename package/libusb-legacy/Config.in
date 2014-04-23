@@ -1,0 +1,14 @@
+config BR2_PACKAGE_LIBUSB_LEGACY
+	bool "libusb-legacy"
+	depends on BR2_TOOLCHAIN_HAS_THREADS
+	depends on !BR2_PACKAGE_LIBUSB_COMPAT
+	help
+	  Userspace library for accessing USB devices (legacy version 0.1)
+
+	  http://libusb.sourceforge.net/
+
+comment "libusb needs a toolchain with thread support"
+	depends on !BR2_TOOLCHAIN_HAS_THREADS
+comment "libusb-legacy is not compatible with libusb-compat because implements same interface"
+	depends on BR2_PACKAGE_LIBUSB_COMPAT
+
