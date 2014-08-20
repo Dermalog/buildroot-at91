@@ -14,15 +14,21 @@ mkdir -p /var/lock/subsys
 RETVAL=0
 
 start() {
-	echo -n "Starting SMB services: "
-	smbd -D
-	RETVAL=$?
-	echo "done"
+        smbd_path=$(which smbd)
+        if [ $? -eq 0 ]; then
+            echo -n "Starting SMB services: "
+	    smbd -D
+	    RETVAL=$?
+	    echo "done"
+        fi
 
-	echo -n "Starting NMB services: "
-	nmbd -D
-	RETVAL2=$?
-	echo "done"
+        nmbd_path=$(which nmbd)
+        if [ $? -eq 0 ]; then
+            echo -n "Starting NMB services: "
+	    nmbd -D
+	    RETVAL2=$?
+	    echo "done"
+        fi
 
 	[ $RETVAL -eq 0 -a $RETVAL2 -eq 0 ] && touch /var/lock/subsys/smb || \
 	   RETVAL=1
@@ -30,16 +36,22 @@ start() {
 }	
 
 stop() {
-	echo -n "Shutting down SMB services: "
-	kill -9 `pidof smbd`
-	RETVAL=$?
-	rm -f /var/run/smbd.pid
-	echo "done"
+        smbd_path=$(which smbd)
+        if [ $? -eq 0 ]; then
+	    echo -n "Shutting down SMB services: "
+	    kill -9 `pidof smbd`
+	    RETVAL=$?
+	    rm -f /var/run/smbd.pid
+	    echo "done"
+        fi
 
-	echo -n "Shutting down NMB services: "
-	kill -9 `pidof nmbd`
-	RETVAL2=$?
-	rm -f /var/run/nmbd.pid
+        nmbd_path=$(which nmbd)
+        if [ $? -eq 0 ]; then
+	    echo -n "Shutting down NMB services: "
+    	    kill -9 `pidof nmbd`
+	    RETVAL2=$?
+	    rm -f /var/run/nmbd.pid
+        fi
 
 	[ $RETVAL -eq 0 -a $RETVAL2 -eq 0 ] && rm -f /var/lock/subsys/smb
 	echo "done"
