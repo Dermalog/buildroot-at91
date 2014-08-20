@@ -11,8 +11,9 @@ TARGET_GENERIC_GETTY_TERM:=$(call qstrip,$(BR2_TARGET_GENERIC_GETTY_TERM))
 
 target-generic-hostname:
 	mkdir -p $(TARGET_DIR)/etc
-	echo "$(TARGET_GENERIC_HOSTNAME)" > $(TARGET_DIR)/etc/hostname
-	$(SED) '$$a \127.0.1.1\t$(TARGET_GENERIC_HOSTNAME)' \
+	ln -sf /tmp/etc/hostname  $(TARGET_DIR)/etc/hostname
+# echo "$(TARGET_GENERIC_HOSTNAME)" > $(TARGET_DIR)/etc/hostname
+# $(SED) '$$a \127.0.1.1\t$(TARGET_GENERIC_HOSTNAME)' \
 		-e '/^127.0.1.1/d' $(TARGET_DIR)/etc/hosts
 
 target-generic-issue:
