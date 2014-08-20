@@ -1,7 +1,6 @@
 config BR2_PACKAGE_LIBUSB_LEGACY
 	bool "libusb-legacy"
 	depends on BR2_TOOLCHAIN_HAS_THREADS
-	depends on !BR2_PACKAGE_LIBUSB_COMPAT
 	help
 	  Userspace library for accessing USB devices (legacy version 0.1)
 

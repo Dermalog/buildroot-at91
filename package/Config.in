@@ -455,8 +455,15 @@ source "package/libiqrf/Config.in"
 source "package/libnfc/Config.in"
 source "package/libnfc-llcp/Config.in"
 source "package/libusb/Config.in"
+
+choice
+	prompt "libusb-0.1"
+	help
+	    "select between interface wraper and real implementation"
 source "package/libusb-compat/Config.in"
 source "package/libusb-legacy/Config.in"
+endchoice
+
 source "package/libv4l/Config.in"
 source "package/mtdev/Config.in"
 source "package/neardal/Config.in"
