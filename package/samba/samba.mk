@@ -4,7 +4,7 @@
 #
 #############################################################
 
-SAMBA_VERSION = 3.6.12
+SAMBA_VERSION = 3.6.24
 SAMBA_SITE = http://ftp.samba.org/pub/samba/stable
 SAMBA_SUBDIR = source3
 SAMBA_INSTALL_STAGING = YES
@@ -27,12 +27,13 @@ SAMBA_CONF_ENV = \
 	samba_cv_HAVE_FCNTL_LOCK=yes \
 	samba_cv_HAVE_SECURE_MKSTEMP=yes \
 	samba_cv_CC_NEGATIVE_ENUM_VALUES=yes \
+	libreplace_cv_HAVE_GETADDRINFO=no \
 	samba_cv_fpie=no \
 	libreplace_cv_HAVE_IPV6=$(if $(BR2_INET_IPV6),yes,no) \
 	$(if $(BR2_PACKAGE_SAMBA_AVAHI),AVAHI_LIBS=-pthread)
 
 SAMBA_CONF_OPT = \
-	--localstatedir=/var \
+	--localstatedir=/tmp \
 	--with-piddir=/var/run \
 	--with-lockdir=/var/lock \
 	--with-logfilebase=/var/log \
@@ -171,7 +172,7 @@ define SAMBA_INSTALL_INITSCRIPTS_CONFIG
 	fi
 	# install config
 	@if [ ! -f $(TARGET_DIR)/etc/samba/smb.conf ]; then \
-		$(INSTALL) -m 0755 -D package/samba/simple.conf $(TARGET_DIR)/etc/samba/smb.conf; \
+		ln -sf /tmp/etc/samba/smb.conf $(TARGET_DIR)/etc/samba/smb.conf ; \
 	fi
 endef
 
