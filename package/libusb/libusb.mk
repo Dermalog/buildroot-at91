@@ -10,8 +10,8 @@ LIBUSB_LICENSE = LGPLv2.1+
 LIBUSB_LICENSE_FILES = COPYING
 LIBUSB_DEPENDENCIES = host-pkgconf 
 LIBUSB_INSTALL_STAGING = YES
-LIBUSB_CONF_OPT += --disable-udev
-
+LIBUSB_CONF_OPT += --disable-udev --disable-timerfd 
+#--enable-debug-log 
 ifeq ($(BR2_avr32),y)
 LIBUSB_CONF_OPT += --disable-timerfd
 endif
