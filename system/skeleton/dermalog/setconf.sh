@@ -16,6 +16,10 @@ iface lo inet loopback
 auto eth0
 EOF
 
+if [ "${ipcfg}" == "" ]; then
+    ipcfg="dhcp"
+fi
+
 if [ "${ipcfg}" == "dhcp" ]; then
     echo "iface eth0 inet dhcp"   >> /tmp/etc/network/interfaces 
 else
