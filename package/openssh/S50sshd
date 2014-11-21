@@ -3,6 +3,13 @@
 # sshd        Starts sshd.
 #
 
+# check developer mode
+developer_mode=$(/usr/sbin/fw_printenv | /bin/grep -i "developer=" | /usr/bin/cut -d= -f2 )
+if [ "${developer_mode}" != "1" ]; then
+    echo "skiped"
+    exit 0
+fi
+
 # Make sure the ssh-keygen progam exists
 [ -f /usr/bin/ssh-keygen ] || exit 0
 

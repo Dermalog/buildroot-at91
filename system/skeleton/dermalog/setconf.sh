@@ -32,6 +32,15 @@ else
     echo "    gateway ${gw}"      >> /tmp/etc/network/interfaces
 fi
 
+developer_mode=$(fw_printenv | grep -i "developer=" | cut -d= -f2 )
 
+if [ "${developer_mode}" == "1" ]; then 
+    echo "DEVELOPER MODE"
+    mount -o rw,remount /    
+    echo "root:b9QQzXd6xCK8I:0:0:root:/root:/bin/sh" >/tmp/etc/passwd
+    echo "sshd:x:103:99:Operator:/var:/bin/sh" >>/tmp/etc/passwd
+else
+    echo "root:x:0:0:root:/root:/bin/false" >/tmp/etc/passwd
+fi
 
 
