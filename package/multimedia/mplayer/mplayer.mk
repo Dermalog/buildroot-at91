@@ -3,7 +3,7 @@
 # mplayer
 #
 #############################################################
-MPLAYER_VERSION = 1.1
+MPLAYER_VERSION = 1.1.1
 MPLAYER_SOURCE = MPlayer-$(MPLAYER_VERSION).tar.xz
 MPLAYER_SITE = http://www.mplayerhq.hu/MPlayer/releases
 
@@ -142,6 +142,9 @@ define MPLAYER_CONFIGURE_CMDS
 		--enable-cross-compile \
 		--disable-ivtv \
 		--enable-dynamic-plugins \
+		--disable-libdca \
+		--disable-decoder=dca \
+		--disable-encoder=dca \
 	)
 endef
 
