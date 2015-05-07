@@ -22,7 +22,7 @@ null::sysinit:/bin/mount -a
 null::sysinit:/dermalog/setconf.sh
 null::sysinit:/bin/hostname -F /etc/hostname
 null::sysinit:/usr/sbin/ubiattach -m 9
-null::sysinit:/bin/mount -t ubifs /dev/ubi1_0 /userfs
+null::sysinit:/bin/mount -t ubifs -o sync /dev/ubi1_0 /userfs
 # now run any rc scripts
 ::sysinit:/etc/init.d/rcS
 
