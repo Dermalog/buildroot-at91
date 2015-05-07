@@ -27,6 +27,12 @@ GSTREAMER_CONF_OPT = \
 		$(if $(BR2_PACKAGE_GSTREAMER_GST_DEBUG),,--disable-gst-debug) \
 		$(if $(BR2_PACKAGE_GSTREAMER_PLUGIN_REGISTRY),,--disable-registry)
 
+# this dirty hack is neccesary because the --disable-rpath option for configure script do not work :-(
+define GSTREAMER_REMOVE_RPATH
+    $(SED) 's|^hardcode_into_libs=.*|hardcode_into_libs=no|g' $(@D)/libtool
+endef 
+
+GSTREAMER_POST_CONFIGURE_HOOKS += GSTREAMER_REMOVE_RPATH
 GSTREAMER_DEPENDENCIES = libglib2 host-pkgconf
 
 $(eval $(autotools-package))
